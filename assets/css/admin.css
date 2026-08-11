@@ -1,0 +1,142 @@
+/* Villa Andie CMS — admin styles */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+:root {
+  --ink: #191613;
+  --bg: #f4f1ea;
+  --surface: #fff;
+  --border: #e2dccd;
+  --muted: #6e675c;
+  --primary: #0e5e5a;
+  --accent: #e0a458;
+  --danger: #a83c22;
+  --radius: 12px;
+}
+body {
+  font: 15px/1.6 system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+a { color: var(--primary); }
+code { background: rgba(0 0 0 / .06); padding: .1em .4em; border-radius: 5px; font-size: .85em; }
+.muted { color: var(--muted); }
+.ta-r { text-align: right; }
+.inline { display: inline; }
+.mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: .85rem; }
+
+.topbar { background: var(--ink); color: #f4efe7; }
+.topbar__inner {
+  max-width: 1100px; margin-inline: auto;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1.5rem; padding: .7rem 1.2rem; flex-wrap: wrap;
+}
+.topbar__brand { color: inherit; text-decoration: none; font-weight: 700; }
+.topbar__brand span { color: var(--accent); font-weight: 500; }
+.topbar__nav { display: flex; gap: 1.1rem; flex-wrap: wrap; }
+.topbar__nav a { color: #cfc8bb; text-decoration: none; font-weight: 500; }
+.topbar__nav a:hover { color: #fff; }
+.topbar__logout { opacity: .8; }
+
+.admin-main { max-width: 1100px; margin-inline: auto; padding: 2rem 1.2rem 4rem; }
+.page-head { margin-bottom: 1.6rem; }
+.page-head h1 { font-size: 1.5rem; margin-bottom: .3rem; }
+
+.notice {
+  padding: .7rem 1rem; border-radius: var(--radius);
+  margin-bottom: 1.2rem; font-weight: 600;
+}
+.notice--ok { background: #e2f2e6; color: #22633a; }
+.notice--err { background: #fbe9e4; color: var(--danger); }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .55rem 1.1rem; border: 1.5px solid var(--primary);
+  border-radius: 999px; background: var(--primary); color: #fff;
+  font: inherit; font-weight: 600; cursor: pointer; text-decoration: none;
+}
+.btn:hover { filter: brightness(1.08); }
+.btn--sm { padding: .3rem .75rem; font-size: .85rem; }
+.btn--ghost { background: transparent; color: var(--primary); }
+.btn--danger { background: transparent; border-color: var(--danger); color: var(--danger); }
+
+.table { width: 100%; border-collapse: collapse; background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(0 0 0 / .07); }
+.table th, .table td { padding: .75rem .9rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.table th { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.table tr.is-disabled td { opacity: .55; }
+.table td.reorder form { display: flex; gap: .25rem; }
+.table td.reorder button {
+  width: 26px; height: 26px; border: 1px solid var(--border);
+  border-radius: 6px; background: var(--bg); cursor: pointer;
+}
+.table td.reorder button:disabled { opacity: .3; cursor: default; }
+
+.badge {
+  display: inline-block; padding: .1rem .6rem; border-radius: 999px;
+  font-size: .75rem; font-weight: 700;
+}
+.badge--on { background: #e2f2e6; color: #22633a; }
+.badge--off { background: #eee9df; color: var(--muted); }
+.badge--draft { background: #fdf0dd; color: #8a5a13; margin-left: .5rem; }
+
+.edit-form { margin-bottom: 2rem; }
+fieldset {
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--surface); padding: 1.3rem; margin-bottom: 1.4rem;
+}
+legend { font-weight: 700; padding-inline: .5rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.field { display: grid; gap: .35rem; margin-bottom: .9rem; }
+.grid-2 .field { margin-bottom: 0; }
+.field--full { grid-column: 1 / -1; }
+.field label { font-weight: 600; font-size: .88rem; }
+.field input:not([type='checkbox'], [type='color']), .field select, .field textarea {
+  width: 100%; padding: .55rem .8rem; font: inherit;
+  border: 1.5px solid var(--border); border-radius: 8px; background: #fdfcf9;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--primary); outline-offset: 1px; }
+.field--check { grid-template-columns: auto 1fr; align-items: center; gap: .6rem; }
+.hint { font-size: .8rem; color: var(--muted); }
+.color-pair { display: flex; gap: .5rem; align-items: center; }
+.color-pair input[type='color'] { width: 42px; height: 38px; padding: 2px; border: 1.5px solid var(--border); border-radius: 8px; background: #fff; }
+.actions { display: flex; gap: .8rem; }
+
+.login-card {
+  max-width: 24rem; margin: 12vh auto 0; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 16px; padding: 2rem;
+  box-shadow: 0 15px 50px -25px rgba(0 0 0 / .3);
+}
+.login-card h1 { font-size: 1.3rem; }
+.login-card form { display: grid; gap: .6rem; margin-top: 1.2rem; }
+.login-card label { font-weight: 600; font-size: .88rem; }
+.login-card input {
+  padding: .6rem .8rem; font: inherit;
+  border: 1.5px solid var(--border); border-radius: 8px;
+}
+.login-card .btn { justify-content: center; margin-top: .4rem; }
+
+.leads { display: grid; gap: 1rem; }
+.lead-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1.1rem 1.3rem;
+}
+.lead-card header { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.lead-card__meta { margin: .2rem 0 .6rem; font-size: .9rem; }
+.lead-card__msg { background: var(--bg); border-radius: 8px; padding: .8rem 1rem; margin-bottom: .8rem; }
+
+.preview-toolbar { display: flex; gap: .6rem; margin-bottom: 1rem; }
+.preview-toolbar .btn { background: transparent; color: var(--primary); }
+.preview-toolbar .btn.is-active { background: var(--primary); color: #fff; }
+.preview-frame-wrap {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 1rem; display: grid; justify-items: center;
+}
+#preview-frame {
+  width: 100%; height: 74vh; border: 1px solid var(--border);
+  border-radius: 8px; background: #fff; transition: width .3s ease;
+  max-width: 100%;
+}
+
+@media (max-width: 720px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .table { display: block; overflow-x: auto; }
+}

@@ -1,0 +1,23 @@
+# Villa Andie CMS — Apache rewrites
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Protect the SQLite database and application internals
+    RewriteRule ^(data|app|templates)/ - [F,L]
+
+    # Existing files (assets, admin scripts) are served directly
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Everything else routes through the front controller
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(woff2|css|js|svg|webp|avif|png|jpe?g)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>

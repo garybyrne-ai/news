@@ -1,0 +1,10 @@
+<?php
+
+declare(strict_types=1);
+
+require __DIR__ . '/_admin.php';
+
+ensure_session();
+$_SESSION = [];
+session_destroy();
+header('Location: ' . url('/admin/login.php'));

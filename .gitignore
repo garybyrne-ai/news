@@ -1,0 +1,9 @@
+# Runtime data — the SQLite DB is created and seeded on first request
+data/*.sqlite
+data/*.sqlite-*
+data/*.db
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
