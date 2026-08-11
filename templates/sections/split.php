@@ -5,8 +5,13 @@ $features = $content['features'] ?? [];
 <section <?= section_attrs($section, $anchor, $index) ?>>
   <div class="container split__layout">
     <figure class="split__media reveal" data-reveal data-clip>
+      <span class="hud-corner hud-corner--tl" aria-hidden="true"></span>
+      <span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+      <?php if (!empty($content['image_label'])): ?>
+      <figcaption class="split__label" aria-hidden="true"><?= e($content['image_label']) ?></figcaption>
+      <?php endif; ?>
       <?php if (!empty($content['image'])): ?>
-      <img src="<?= e($content['image']) ?>" alt="<?= e($content['heading'] ?? '') ?>" loading="lazy" decoding="async" data-parallax-img>
+      <img src="<?= e(media_url($content['image'])) ?>" alt="<?= e($content['heading'] ?? '') ?>" width="880" height="1100" loading="lazy" decoding="async" data-parallax-img>
       <?php else: ?>
       <div class="split__placeholder" aria-hidden="true" data-parallax-img>
         <svg viewBox="0 0 480 600" fill="none" role="presentation" preserveAspectRatio="xMidYMid slice">

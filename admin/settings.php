@@ -12,6 +12,7 @@ $groups = [
         'business_tagline'  => ['Tagline', 'text'],
         'business_category' => ['Category (eyebrow context)', 'text'],
         'status_text'       => ['Status chip text (e.g. "Enquiries open")', 'text'],
+        'geo_label'         => ['Coordinates label on the hero (e.g. 28.92° N · 13.66° W)', 'text'],
         'hours'             => ['Opening hours / availability note', 'text'],
     ],
     'Contact' => [

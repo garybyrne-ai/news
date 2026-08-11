@@ -156,6 +156,16 @@ function asset(string $path): string
     return url($path) . '?v=' . $v;
 }
 
+/** Resolve a CMS-entered media path: absolute URLs pass through,
+ *  repo-relative paths (e.g. assets/img/villa/pool.jpg) get the base path. */
+function media_url(string $path): string
+{
+    if ($path === '' || preg_match('#^(https?:)?//#', $path)) {
+        return $path;
+    }
+    return url($path);
+}
+
 function site_origin(): string
 {
     $https = !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';

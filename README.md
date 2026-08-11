@@ -63,6 +63,24 @@ assets/fonts/          Self-hosted Manrope + Space Grotesk (woff2)
 data/                  SQLite database (gitignored, auto-created)
 ```
 
+## Real photography
+
+`assets/img/villa/` contains optimized photos of the actual property,
+sourced from its official listing pages (hero, pool, terrace, bedroom,
+kitchen, barbecue, living room, patio). All image slots are CMS-editable
+paths, so photos can be swapped without touching code.
+
+## PWA — works like an app on mobile
+
+- `manifest.json` + maskable icons → installable ("Add to Home Screen"),
+  runs standalone in portrait with a dark themed status bar.
+- `sw.js` service worker → cache-first assets, network-first pages,
+  offline fallback to the cached homepage. Admin and the enquiry
+  endpoint are never intercepted.
+- App-style fixed bottom tab bar on mobile (Home / Villa / Area / Call /
+  Enquire) with active-section highlighting, safe-area insets for
+  notched phones, no tap highlight flash, and no scroll rubber-banding.
+
 ## Frontend notes
 
 - No frameworks, no build step, no external requests (fonts self-hosted).

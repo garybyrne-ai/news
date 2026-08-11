@@ -20,4 +20,8 @@ Options -Indexes
     <FilesMatch "\.(woff2|css|js|svg|webp|avif|png|jpe?g)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
+    # The service worker must always revalidate so updates roll out
+    <Files "sw.js">
+        Header set Cache-Control "no-cache"
+    </Files>
 </IfModule>

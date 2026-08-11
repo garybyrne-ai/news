@@ -21,7 +21,7 @@ $items = $content['items'] ?? [];
           <span class="service-row__arrow" aria-hidden="true">→</span>
         </a>
         <?php if (!empty($item['image'])): ?>
-        <span class="service-row__thumb" aria-hidden="true"><img src="<?= e($item['image']) ?>" alt="" loading="lazy" decoding="async"></span>
+        <span class="service-row__thumb" aria-hidden="true"><img src="<?= e(media_url($item['image'])) ?>" alt="" width="640" height="480" loading="lazy" decoding="async"></span>
         <?php endif; ?>
       </li>
       <?php endforeach; ?>

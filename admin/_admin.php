@@ -19,6 +19,8 @@ const SECTION_FIELDS = [
         'cta_secondary'     => ['Secondary CTA label', 'text'],
         'cta_secondary_url' => ['Secondary CTA URL', 'text'],
         'scroll_cue'        => ['Scroll cue text', 'text'],
+        'image'             => ['Hero image (path or URL, e.g. assets/img/villa/hero.jpg)', 'text'],
+        'image_alt'         => ['Hero image alt text', 'text'],
         'cards'             => ['Floating cards', 'json', '[{"title":"…","text":"…"}]'],
     ],
     'intro' => [
@@ -39,7 +41,8 @@ const SECTION_FIELDS = [
         'eyebrow'  => ['Eyebrow', 'text'],
         'heading'  => ['Heading', 'text'],
         'text'     => ['Description', 'textarea'],
-        'image'    => ['Image URL (blank = stylised placeholder)', 'text'],
+        'image'       => ['Image (path or URL, blank = stylised placeholder)', 'text'],
+        'image_label' => ['Small label shown on the image', 'text'],
         'features' => ['Feature list', 'json', '["Feature one","Feature two"]'],
         'cta'      => ['CTA label', 'text'],
         'cta_url'  => ['CTA URL', 'text'],
@@ -73,6 +76,7 @@ const SECTION_FIELDS = [
     'cta' => [
         'heading'         => ['Heading', 'text'],
         'text'            => ['Supporting sentence', 'textarea'],
+        'image'           => ['Background image (path or URL, blank = gradient only)', 'text'],
         'cta_primary'     => ['Primary CTA label', 'text'],
         'cta_primary_url' => ['Primary CTA URL', 'text'],
         'cta_secondary'   => ['Secondary CTA label (calls the phone number)', 'text'],

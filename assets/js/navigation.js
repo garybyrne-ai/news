@@ -47,9 +47,7 @@ export function initNavigation() {
 
   /* Active section — nav links, side dots, header contrast */
   if (sections.length) {
-    const links = new Map(
-      [...document.querySelectorAll('[data-nav-link]')].map((a) => [a.dataset.navLink, a]),
-    );
+    const links = [...document.querySelectorAll('[data-nav-link]')];
     const dots = new Map(
       [...document.querySelectorAll('[data-dot]')].map((a) => [a.dataset.dot, a]),
     );
@@ -59,8 +57,8 @@ export function initNavigation() {
     );
 
     const activate = (id) => {
-      links.forEach((a, key) => {
-        const active = key === id;
+      links.forEach((a) => {
+        const active = a.dataset.navLink === id;
         a.classList.toggle('is-active', active);
         if (active) a.setAttribute('aria-current', 'true');
         else a.removeAttribute('aria-current');

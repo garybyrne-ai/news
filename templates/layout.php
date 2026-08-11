@@ -29,11 +29,19 @@ $email     = setting('email');
 $themeVars = theme_css_vars();
 $schema    = schema_org_json();
 $origin    = site_origin();
+$heroImage = '';
+foreach ($sections as $s) {
+    if ($s['type'] === 'hero') {
+        $heroImage = media_url($s['content']['image'] ?? '');
+        break;
+    }
+}
+$ogImage = setting('og_image') !== '' ? setting('og_image') : ($heroImage !== '' ? $origin . $heroImage : '');
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title><?= e(setting('seo_title', $businessName)) ?></title>
 <meta name="description" content="<?= e(setting('seo_description')) ?>">
 <link rel="canonical" href="<?= e($origin . url('/')) ?>">
@@ -42,13 +50,22 @@ $origin    = site_origin();
 <meta property="og:description" content="<?= e(setting('seo_description')) ?>">
 <meta property="og:url" content="<?= e($origin . url('/')) ?>">
 <meta property="og:site_name" content="<?= e($businessName) ?>">
-<?php if (setting('og_image') !== ''): ?>
-<meta property="og:image" content="<?= e(setting('og_image')) ?>">
+<?php if ($ogImage !== ''): ?>
+<meta property="og:image" content="<?= e($ogImage) ?>">
 <?php endif; ?>
 <meta name="theme-color" content="#12100d">
 <link rel="icon" href="<?= e(url('assets/img/favicon.svg')) ?>" type="image/svg+xml">
+<link rel="manifest" href="<?= e(url('manifest.json')) ?>">
+<link rel="apple-touch-icon" href="<?= e(url('assets/img/apple-touch-icon.png')) ?>">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="<?= e($businessName) ?>">
 <link rel="preload" href="<?= e(url('assets/fonts/space-grotesk-700.woff2')) ?>" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="<?= e(url('assets/fonts/manrope-400.woff2')) ?>" as="font" type="font/woff2" crossorigin>
+<?php if ($heroImage !== ''): ?>
+<link rel="preload" href="<?= e($heroImage) ?>" as="image" fetchpriority="high">
+<?php endif; ?>
 <link rel="stylesheet" href="<?= e(asset('assets/css/main.css')) ?>">
 <?php if ($themeVars !== ''): ?>
 <style><?= $themeVars ?></style>
@@ -117,15 +134,40 @@ $origin    = site_origin();
 
 <?php include APP_ROOT . '/templates/sections/footer.php'; ?>
 
-<div class="mobile-cta" id="mobile-cta" aria-hidden="false">
+<nav class="app-bar" id="mobile-cta" aria-label="Quick navigation">
+  <a href="#home" data-nav-link="home">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-4.5v-6h-5v6H5a1 1 0 0 1-1-1v-8.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Home</span>
+  </a>
+  <a href="#services" data-nav-link="services">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17c1.5 1.2 3.5 1.2 5 0s3.5-1.2 5 0 3.5 1.2 5 0 2-.8 3 0M4 13l3-8h4l1 4h6l2 4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span>Villa</span>
+  </a>
+  <a href="#areas" data-nav-link="areas">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.4-6.5-10a6.5 6.5 0 0 1 13 0c0 4.6-6.5 10-6.5 10z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="11" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+    <span>Area</span>
+  </a>
   <?php if ($phone !== ''): ?>
-  <a class="btn btn--ghost" href="tel:<?= e(preg_replace('/\s+/', '', $phone)) ?>">Call</a>
+  <a href="tel:<?= e(preg_replace('/\s+/', '', $phone)) ?>">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h3l2 5-2.2 1.6a12 12 0 0 0 5.6 5.6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Call</span>
+  </a>
   <?php endif; ?>
-  <a class="btn btn--primary" href="#contact">Get a quote</a>
-</div>
+  <a class="app-bar__cta" href="#contact" data-nav-link="contact">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm0 1 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+    <span>Enquire</span>
+  </a>
+</nav>
 
 <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__label"></span></div>
 
 <script type="module" src="<?= e(asset('assets/js/main.js')) ?>"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('<?= e(url('sw.js')) ?>').catch(() => {});
+  });
+}
+</script>
 </body>
 </html>

@@ -1,6 +1,20 @@
 <?php
 /** @var array $section @var array $content @var string $anchor @var int $index */
 $cards = $content['cards'] ?? [];
+$image = media_url($content['image'] ?? '');
+
+// Ticker items derive from live CMS content: amenity titles + location facts.
+$tickerItems = [];
+if ($services = section_by_type('services')) {
+    foreach (section_content($services)['items'] ?? [] as $item) {
+        if (!empty($item['title'])) {
+            $tickerItems[] = $item['title'];
+        }
+    }
+}
+$tickerItems[] = setting('locality', 'Puerto del Carmen');
+$tickerItems[] = '1.3 km to the beach';
+$tickerItems[] = '6 km from the airport';
 ?>
 <section <?= section_attrs($section, $anchor, $index) ?>>
   <div class="hero__bg" aria-hidden="true">
@@ -31,31 +45,24 @@ $cards = $content['cards'] ?? [];
       </p>
     </div>
 
-    <div class="hero__visual" data-parallax-scene aria-hidden="true">
-      <svg class="hero__scene" viewBox="0 0 520 560" fill="none" role="presentation" data-parallax-layer="6">
-        <defs>
-          <linearGradient id="hg-sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="var(--color-secondary)" stop-opacity=".55"/>
-            <stop offset="1" stop-color="var(--color-secondary)" stop-opacity="0"/>
-          </linearGradient>
-          <linearGradient id="hg-sea" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="var(--color-primary)"/>
-            <stop offset="1" stop-color="var(--color-primary)" stop-opacity=".25"/>
-          </linearGradient>
-        </defs>
-        <circle class="hero__sun" cx="360" cy="150" r="86" fill="var(--color-accent)"/>
-        <path d="M0 320 L150 230 L240 300 L360 240 L520 330 L520 560 L0 560 Z" fill="#1c1915"/>
-        <path d="M0 360 L120 290 L230 350 L390 280 L520 370 L520 560 L0 560 Z" fill="#242019"/>
-        <rect x="0" y="150" width="520" height="180" fill="url(#hg-sky)" opacity=".35"/>
-        <g class="hero__waves">
-          <path d="M0 420 Q130 405 260 420 T520 420 L520 560 L0 560 Z" fill="url(#hg-sea)" opacity=".9"/>
-          <path d="M0 455 Q130 442 260 455 T520 455" stroke="var(--color-secondary)" stroke-opacity=".5" stroke-width="2"/>
-          <path d="M0 490 Q130 478 260 490 T520 490" stroke="var(--color-secondary)" stroke-opacity=".3" stroke-width="2"/>
-          <path d="M0 525 Q130 514 260 525 T520 525" stroke="var(--color-secondary)" stroke-opacity=".15" stroke-width="2"/>
-        </g>
-      </svg>
+    <div class="hero__visual" data-parallax-scene>
+      <figure class="hero__frame" data-parallax-layer="5">
+        <?php if ($image !== ''): ?>
+        <img class="hero__photo" src="<?= e($image) ?>" width="1100" height="733"
+             alt="<?= e($content['image_alt'] ?? '') ?>" fetchpriority="high" decoding="async">
+        <?php endif; ?>
+        <span class="hud-corner hud-corner--tl" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner--tr" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner--bl" aria-hidden="true"></span>
+        <span class="hud-corner hud-corner--br" aria-hidden="true"></span>
+        <span class="hero__scan" aria-hidden="true"></span>
+        <figcaption class="hero__coords" aria-hidden="true">
+          <span class="hero__coords-dot status-dot status-dot--pulse"></span>
+          <?= e(setting('geo_label')) ?> — <?= e(strtoupper(setting('locality', ''))) ?>
+        </figcaption>
+      </figure>
       <?php foreach (array_slice($cards, 0, 3) as $i => $card): ?>
-      <div class="hero-card hero-card--<?= $i + 1 ?>" data-parallax-layer="<?= 10 + $i * 6 ?>">
+      <div class="hero-card hero-card--<?= $i + 1 ?>" data-parallax-layer="<?= 12 + $i * 7 ?>">
         <span class="hero-card__title"><?= e($card['title'] ?? '') ?></span>
         <span class="hero-card__text"><?= e($card['text'] ?? '') ?></span>
       </div>
@@ -67,4 +74,18 @@ $cards = $content['cards'] ?? [];
     <span><?= e($content['scroll_cue'] ?? 'Scroll to explore') ?></span>
     <span class="scroll-cue__line" aria-hidden="true"></span>
   </a>
+
+  <?php if ($tickerItems): ?>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <?php for ($r = 0; $r < 2; $r++): ?>
+      <span class="ticker__group">
+        <?php foreach ($tickerItems as $item): ?>
+        <span class="ticker__item"><?= e($item) ?></span><span class="ticker__sep">◇</span>
+        <?php endforeach; ?>
+      </span>
+      <?php endfor; ?>
+    </div>
+  </div>
+  <?php endif; ?>
 </section>
