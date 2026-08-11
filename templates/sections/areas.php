@@ -11,6 +11,14 @@ $places = $content['places'] ?? [];
       <?php if (!empty($content['cta'])): ?>
       <a class="btn btn--ghost reveal" data-reveal data-reveal-delay="180" href="<?= e($content['cta_url'] ?? '#contact') ?>"><?= e($content['cta']) ?> <span aria-hidden="true">→</span></a>
       <?php endif; ?>
+      <?php if (!empty($content['image'])): ?>
+      <figure class="areas__photo reveal" data-reveal data-reveal-delay="240">
+        <img src="<?= e(media_url($content['image'])) ?>" alt="<?= e($content['image_label'] ?? '') ?>"<?= img_size_attrs($content['image']) ?> loading="lazy" decoding="async">
+        <?php if (!empty($content['image_label'])): ?>
+        <figcaption class="split__label"><?= e($content['image_label']) ?></figcaption>
+        <?php endif; ?>
+      </figure>
+      <?php endif; ?>
     </div>
 
     <div class="areas__radar reveal" data-reveal data-reveal-delay="120" role="img"

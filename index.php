@@ -96,6 +96,7 @@ function handle_enquiry(): void
         Database::pdo()
             ->prepare('INSERT INTO leads (name, email, phone, topic, message, consent) VALUES (?, ?, ?, ?, ?, 1)')
             ->execute([$name, $email, mb_substr($phone, 0, 40), mb_substr($topic, 0, 80), $message]);
+        notify_lead_by_email($name, $email, $phone, $topic, $message);
         $ok = true;
     }
 
@@ -105,5 +106,52 @@ function handle_enquiry(): void
     } else {
         flash_set('contact_success', 'Thank you — your enquiry has been received. We will be in touch shortly.');
         header('Location: ' . url('/') . '#contact');
+    }
+}
+
+/**
+ * Email the enquiry to the address configured in Settings → Contact form.
+ * Leads are always stored in the CMS; email is an additional channel and
+ * a delivery failure never breaks the submission.
+ */
+function notify_lead_by_email(string $name, string $email, string $phone, string $topic, string $message): void
+{
+    $to = trim(setting('lead_notify_email'));
+    if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
+        return;
+    }
+
+    $from = trim(setting('lead_from_email'));
+    if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
+        $host = preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'localhost');
+        $from = 'noreply@' . preg_replace('/:\d+$/', '', $host);
+    }
+
+    $business = setting('business_name', 'Website');
+    // Strip header-injection characters from values used in headers.
+    $cleanName  = preg_replace('/[\r\n<>]/', '', $name);
+    $replyTo    = preg_replace('/[\r\n]/', '', $email);
+
+    $subject = sprintf('New enquiry from %s — %s', $cleanName, $business);
+    $body = "You have received a new enquiry via the {$business} website.\n\n"
+        . "Name:    {$name}\n"
+        . "Email:   {$email}\n"
+        . ($phone !== '' ? "Phone:   {$phone}\n" : '')
+        . ($topic !== '' ? "Topic:   {$topic}\n" : '')
+        . "\nMessage:\n{$message}\n\n"
+        . "—\nThis enquiry is also stored in the CMS under Admin → Leads.\n";
+
+    $headers = [
+        'From: ' . $business . ' <' . $from . '>',
+        'Reply-To: ' . $cleanName . ' <' . $replyTo . '>',
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'X-Mailer: VillaCMS',
+    ];
+
+    try {
+        @mail($to, '=?UTF-8?B?' . base64_encode($subject) . '?=', $body, implode("\r\n", $headers));
+    } catch (Throwable) {
+        // Never let mail transport issues break the enquiry flow.
     }
 }

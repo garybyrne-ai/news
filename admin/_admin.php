@@ -26,7 +26,14 @@ const SECTION_FIELDS = [
     'intro' => [
         'statement' => ['Large statement', 'textarea'],
         'text'      => ['Supporting paragraph', 'textarea'],
+        'images'    => ['Photo strip', 'json', '[{"src":"assets/img/villa/…","alt":"…"}]'],
         'metrics'   => ['Trust metrics', 'json', '[{"value":"3","label":"Bedrooms"}]'],
+    ],
+    'gallery' => [
+        'eyebrow' => ['Eyebrow', 'text'],
+        'heading' => ['Heading', 'text'],
+        'text'    => ['Short description', 'textarea'],
+        'items'   => ['Photos', 'json', '[{"src":"assets/img/villa/…","caption":"…","alt":"…"}]'],
     ],
     'services' => [
         'eyebrow' => ['Eyebrow', 'text'],
@@ -34,8 +41,9 @@ const SECTION_FIELDS = [
         'items'   => ['Service items', 'json', '[{"title":"…","text":"…","image":"","visual":"pool|terrace|bedrooms|kitchen|bbq|essentials"}]'],
     ],
     'why' => [
-        'heading' => ['Heading', 'text'],
-        'items'   => ['Feature statements', 'json', '[{"title":"…","text":"…"}]'],
+        'heading'  => ['Heading', 'text'],
+        'bg_image' => ['Background image (path or URL, blank = plain dark)', 'text'],
+        'items'    => ['Feature statements', 'json', '[{"title":"…","text":"…"}]'],
     ],
     'split' => [
         'eyebrow'  => ['Eyebrow', 'text'],
@@ -56,6 +64,8 @@ const SECTION_FIELDS = [
         'eyebrow' => ['Eyebrow', 'text'],
         'heading' => ['Heading', 'text'],
         'text'    => ['Description', 'textarea'],
+        'image'       => ['Photo (path or URL)', 'text'],
+        'image_label' => ['Photo label', 'text'],
         'places'  => ['Places & distances', 'json', '[{"name":"…","distance":"1.3 km"}]'],
         'cta'     => ['CTA label', 'text'],
         'cta_url' => ['CTA URL', 'text'],
@@ -85,6 +95,7 @@ const SECTION_FIELDS = [
         'eyebrow' => ['Eyebrow', 'text'],
         'heading' => ['Heading', 'text'],
         'text'    => ['Description', 'textarea'],
+        'image'   => ['Photo (path or URL, blank = none)', 'text'],
         'topics'  => ['Enquiry topics', 'json', '["Availability","Pricing"]'],
     ],
 ];

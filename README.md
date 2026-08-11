@@ -63,6 +63,24 @@ assets/fonts/          Self-hosted Manrope + Space Grotesk (woff2)
 data/                  SQLite database (gitignored, auto-created)
 ```
 
+## Deploying updates to an existing installation
+
+Just pull the new code — nothing else. On the next page load the
+built-in content upgrader (`app/upgrade.php`) merges any newly
+introduced settings, content fields (e.g. image slots) and sections
+(e.g. the photo gallery) into the existing database. It only fills in
+keys that are missing or empty, so content edited in the admin is
+never overwritten.
+
+## Contact-form email notifications
+
+Enquiries are always stored under **Admin → Leads**. To also receive
+them by email, set **Settings → Contact form → "Send enquiry emails
+to"**. Optionally set the from-address (defaults to
+`noreply@your-domain`); replies go straight to the enquirer via
+Reply-To. Uses PHP `mail()` — on Cloudways, configure SMTP under
+Server Settings → SMTP for reliable delivery.
+
 ## Real photography
 
 `assets/img/villa/` contains optimized photos of the actual property,

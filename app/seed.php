@@ -3,14 +3,17 @@
 declare(strict_types=1);
 
 /**
- * First-run seed. Content uses only verified Villa Andie facts
- * (listing data: Puerto del Carmen, Tías, Lanzarote). Anything not
- * verifiable is left blank or marked as an editable placeholder —
- * never presented as fact on the public site.
+ * Canonical default content. Used to seed a fresh database AND by the
+ * content upgrader (app/upgrade.php), which merges newly introduced
+ * keys/sections into existing databases without touching user edits.
+ *
+ * Content uses only verified Villa Andie facts (listing data: Puerto
+ * del Carmen, Tías, Lanzarote). Anything not verifiable is left blank
+ * or marked as an editable placeholder — never presented as fact.
  */
-function seed_database(PDO $pdo): void
+function seed_default_settings(): array
 {
-    $settings = [
+    return [
         'business_name'     => 'Villa Andie',
         'business_tagline'  => 'Private pool villa in Puerto del Carmen, Lanzarote',
         'business_category' => 'Holiday Villa',
@@ -25,6 +28,10 @@ function seed_database(PDO $pdo): void
         'hours'             => 'Enquiries answered daily',
         'instagram'         => '',
         'facebook'          => '',
+        // Contact form notifications: leads are always stored in the CMS;
+        // when lead_notify_email is set they are also emailed there.
+        'lead_notify_email' => '',
+        'lead_from_email'   => '',
         'seo_title'         => 'Villa Andie — Private Pool Villa in Puerto del Carmen, Lanzarote',
         'seo_description'   => 'Villa Andie is a 3-bedroom holiday villa with private pool, sea-view terrace and free parking in Puerto del Carmen, Lanzarote — 1.3 km from Puerto del Carmen Beach and 6 km from Lanzarote Airport.',
         'og_image'          => '',
@@ -40,15 +47,12 @@ function seed_database(PDO $pdo): void
         'color_accent'      => '',
         'color_border'      => '',
         'color_success'     => '',
-        // Admin auth — change this password immediately after first login.
-        'admin_password_hash' => password_hash('change-me-now', PASSWORD_DEFAULT),
     ];
-    $stmt = $pdo->prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
-    foreach ($settings as $key => $value) {
-        $stmt->execute([$key, $value]);
-    }
+}
 
-    $sections = [
+function seed_default_sections(): array
+{
+    return [
         [
             'type' => 'hero', 'label' => 'Hero', 'anchor' => 'home', 'background' => 'dark',
             'content' => [
@@ -74,6 +78,11 @@ function seed_database(PDO $pdo): void
             'content' => [
                 'statement' => 'A private villa holiday without the usual hassle.',
                 'text'      => 'No shared corridors, no crowded pools. Villa Andie gives you a whole house in the heart of Puerto del Carmen — with a private entrance, free WiFi, free parking and facilities for guests with disabilities.',
+                'images'    => [
+                    ['src' => 'assets/img/villa/intro-entrance.jpg', 'alt' => 'Private entrance of the villa framed by palms'],
+                    ['src' => 'assets/img/villa/intro-terrace.jpg',  'alt' => 'Upper terrace of the villa with views over Puerto del Carmen'],
+                    ['src' => 'assets/img/villa/intro-pool.jpg',     'alt' => 'Sun lounger with towels beside the private pool'],
+                ],
                 'metrics'   => [
                     ['value' => '3',      'label' => 'Bedrooms'],
                     ['value' => '2',      'label' => 'Bathrooms'],
@@ -100,8 +109,9 @@ function seed_database(PDO $pdo): void
         [
             'type' => 'why', 'label' => 'Why Choose Us', 'anchor' => 'why-us', 'background' => 'dark',
             'content' => [
-                'heading' => 'Why Villa Andie',
-                'items'   => [
+                'heading'  => 'Why Villa Andie',
+                'bg_image' => 'assets/img/villa/why-bg.jpg',
+                'items'    => [
                     ['title' => 'Genuinely private',        'text' => 'Private pool, private entrance, private parking — the villa is yours and only yours.'],
                     ['title' => 'Sea and mountain views',   'text' => 'A balcony with mountain views and a terrace facing the sea.'],
                     ['title' => 'Walk to the beach',        'text' => 'Puerto del Carmen Beach is 1.3 km away; Playa Chica 1.4 km.'],
@@ -130,6 +140,26 @@ function seed_database(PDO $pdo): void
             ],
         ],
         [
+            'type' => 'gallery', 'label' => 'Photo Gallery', 'anchor' => 'gallery', 'background' => 'surface',
+            'content' => [
+                'eyebrow' => 'The spaces',
+                'heading' => 'A look around',
+                'text'    => 'Every corner of the villa, exactly as you will find it.',
+                'items'   => [
+                    ['src' => 'assets/img/villa/gallery-pool-wide.jpg', 'caption' => 'The private pool',        'alt' => 'Private pool of Villa Andie in front of the whitewashed house'],
+                    ['src' => 'assets/img/villa/gallery-exterior.jpg',  'caption' => 'The villa',               'alt' => 'Two-storey exterior of Villa Andie with balcony'],
+                    ['src' => 'assets/img/villa/gallery-terrace.jpg',   'caption' => 'Upper terrace',           'alt' => 'Covered upper terrace with rooftop views'],
+                    ['src' => 'assets/img/villa/gallery-living.jpg',    'caption' => 'Living room',             'alt' => 'Bright living room with sofas'],
+                    ['src' => 'assets/img/villa/gallery-dining.jpg',    'caption' => 'Dining',                  'alt' => 'Dining table set with glasses and fresh pineapple'],
+                    ['src' => 'assets/img/villa/gallery-kitchen.jpg',   'caption' => 'The kitchen',             'alt' => 'Fully equipped kitchen with dining area'],
+                    ['src' => 'assets/img/villa/gallery-bedroom.jpg',   'caption' => 'Master bedroom',          'alt' => 'Double bedroom with made-up bed'],
+                    ['src' => 'assets/img/villa/gallery-bathroom.jpg',  'caption' => 'Bathroom',                'alt' => 'Bathroom with bathtub'],
+                    ['src' => 'assets/img/villa/gallery-entrance.jpg',  'caption' => 'Private entrance',        'alt' => 'Entrance patio with wooden door and palm tree'],
+                    ['src' => 'assets/img/villa/gallery-lounger.jpg',   'caption' => 'Poolside',                'alt' => 'Sun lounger with a fresh towel beside the pool'],
+                ],
+            ],
+        ],
+        [
             'type' => 'process', 'label' => 'Process', 'anchor' => 'process', 'background' => 'light',
             'content' => [
                 'eyebrow' => 'How it works',
@@ -148,6 +178,8 @@ function seed_database(PDO $pdo): void
                 'eyebrow'   => 'The location',
                 'heading'   => "Proudly placed in Puerto del Carmen",
                 'text'      => 'Villa Andie sits in Puerto del Carmen on Lanzarote\'s sunny south-east coast — beaches, restaurants and the old harbour all within easy reach.',
+                'image'     => 'assets/img/villa/areas-villa.jpg',
+                'image_label' => 'Villa Andie, Puerto del Carmen',
                 'places'    => [
                     ['name' => 'Puerto del Carmen Beach', 'distance' => '1.3 km'],
                     ['name' => 'Playa Chica',             'distance' => '1.4 km'],
@@ -214,16 +246,29 @@ function seed_database(PDO $pdo): void
                 'eyebrow' => 'Contact',
                 'heading' => 'Start planning your stay',
                 'text'    => 'Send an enquiry and we\'ll come back to you with availability and answers.',
+                'image'   => 'assets/img/villa/contact-welcome.jpg',
                 'topics'  => ['Availability', 'Pricing', 'Accessibility', 'General question'],
             ],
         ],
     ];
+}
+
+function seed_database(PDO $pdo): void
+{
+    $settings = seed_default_settings();
+    // Change this password immediately after first login.
+    $settings['admin_password_hash'] = password_hash('change-me-now', PASSWORD_DEFAULT);
+
+    $stmt = $pdo->prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
+    foreach ($settings as $key => $value) {
+        $stmt->execute([$key, $value]);
+    }
 
     $stmt = $pdo->prepare(
         'INSERT INTO sections (type, label, anchor, enabled, sort, background, css_class, content_draft, content_published)
          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
     );
-    foreach ($sections as $i => $s) {
+    foreach (seed_default_sections() as $i => $s) {
         $json = json_encode($s['content'], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
         $stmt->execute([
             $s['type'], $s['label'], $s['anchor'],

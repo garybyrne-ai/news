@@ -30,6 +30,10 @@ final class Database
             require_once APP_ROOT . '/app/seed.php';
             seed_database(self::$pdo);
         }
+        // Idempotent: merges content introduced by newer code into
+        // databases seeded by older versions, then stamps the version.
+        require_once APP_ROOT . '/app/upgrade.php';
+        upgrade_database(self::$pdo);
     }
 
     public static function pdo(): PDO

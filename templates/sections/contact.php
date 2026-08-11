@@ -15,6 +15,12 @@ $error   = flash_get('contact_error');
       <h2 class="section-title reveal" data-reveal data-reveal-delay="60"><?= e($content['heading'] ?? '') ?></h2>
       <p class="contact__text reveal" data-reveal data-reveal-delay="120"><?= e($content['text'] ?? '') ?></p>
 
+      <?php if (!empty($content['image'])): ?>
+      <figure class="contact__photo reveal" data-reveal data-reveal-delay="160">
+        <img src="<?= e(media_url($content['image'])) ?>" alt=""<?= img_size_attrs($content['image']) ?> loading="lazy" decoding="async">
+      </figure>
+      <?php endif; ?>
+
       <dl class="contact__details reveal" data-reveal data-reveal-delay="180">
         <?php if ($phone !== ''): ?>
         <div><dt>Phone</dt><dd><a href="tel:<?= e(preg_replace('/\s+/', '', $phone)) ?>"><?= e($phone) ?></a></dd></div>

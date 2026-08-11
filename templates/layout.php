@@ -6,7 +6,7 @@ $businessName = setting('business_name', 'Villa Andie');
 $navSections  = array_values(array_filter($sections, fn ($s) => !in_array($s['type'], ['cta'], true)));
 $navItems     = [];
 foreach ($sections as $s) {
-    if (in_array($s['type'], ['intro', 'services', 'why', 'process', 'areas', 'reviews', 'faq', 'contact'], true)) {
+    if (in_array($s['type'], ['intro', 'services', 'why', 'gallery', 'process', 'areas', 'reviews', 'faq', 'contact'], true)) {
         $navItems[] = [
             'anchor' => $s['anchor'] !== '' ? $s['anchor'] : $s['type'] . '-' . $s['id'],
             'label'  => $s['label'],
@@ -14,6 +14,7 @@ foreach ($sections as $s) {
                 'intro'    => 'About',
                 'services' => 'The Villa',
                 'why'      => 'Why Us',
+                'gallery'  => 'Gallery',
                 'process'  => 'How It Works',
                 'areas'    => 'Location',
                 'reviews'  => 'Reviews',

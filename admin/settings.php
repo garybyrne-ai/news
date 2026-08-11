@@ -25,6 +25,10 @@ $groups = [
         'instagram' => ['Instagram URL', 'text'],
         'facebook'  => ['Facebook URL', 'text'],
     ],
+    'Contact form' => [
+        'lead_notify_email' => ['Send enquiry emails to (blank = store in Leads only)', 'text'],
+        'lead_from_email'   => ['Send emails from this address (blank = noreply@your-domain)', 'text'],
+    ],
     'SEO & schema' => [
         'seo_title'       => ['Meta title', 'text'],
         'seo_description' => ['Meta description', 'textarea'],

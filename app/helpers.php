@@ -166,6 +166,22 @@ function media_url(string $path): string
     return url($path);
 }
 
+/** width/height attributes for a local image so the layout reserves
+ *  space before load (correct lazy-loading + zero CLS). */
+function img_size_attrs(string $path): string
+{
+    static $cache = [];
+    if (preg_match('#^(https?:)?//#', $path)) {
+        return '';
+    }
+    if (!isset($cache[$path])) {
+        $file = APP_ROOT . '/' . ltrim($path, '/');
+        $size = is_file($file) ? @getimagesize($file) : false;
+        $cache[$path] = $size ? ' width="' . $size[0] . '" height="' . $size[1] . '"' : '';
+    }
+    return $cache[$path];
+}
+
 function site_origin(): string
 {
     $https = !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';

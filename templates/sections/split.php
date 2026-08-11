@@ -11,7 +11,7 @@ $features = $content['features'] ?? [];
       <figcaption class="split__label" aria-hidden="true"><?= e($content['image_label']) ?></figcaption>
       <?php endif; ?>
       <?php if (!empty($content['image'])): ?>
-      <img src="<?= e(media_url($content['image'])) ?>" alt="<?= e($content['heading'] ?? '') ?>" width="880" height="1100" loading="lazy" decoding="async" data-parallax-img>
+      <img src="<?= e(media_url($content['image'])) ?>" alt="<?= e($content['heading'] ?? '') ?>"<?= img_size_attrs($content['image']) ?> loading="lazy" decoding="async" data-parallax-img>
       <?php else: ?>
       <div class="split__placeholder" aria-hidden="true" data-parallax-img>
         <svg viewBox="0 0 480 600" fill="none" role="presentation" preserveAspectRatio="xMidYMid slice">

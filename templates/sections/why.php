@@ -3,7 +3,10 @@
 $items = $content['items'] ?? [];
 ?>
 <section <?= section_attrs($section, $anchor, $index) ?>>
-  <div class="container">
+  <?php if (!empty($content['bg_image'])): ?>
+  <div class="why__bg" aria-hidden="true" style="background-image:url('<?= e(media_url($content['bg_image'])) ?>')"></div>
+  <?php endif; ?>
+  <div class="container why__inner">
     <h2 class="display-title reveal" data-reveal><?= e($content['heading'] ?? '') ?></h2>
     <ol class="why-list">
       <?php foreach ($items as $i => $item): ?>
