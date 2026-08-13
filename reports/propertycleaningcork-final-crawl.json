@@ -1,0 +1,434 @@
+[
+ {
+  "url": "/",
+  "title": "Exterior Cleaning Cork | Pressure Washing & Soft Washing",
+  "title_len": 56,
+  "desc_len": 148,
+  "desc": "Cork's trusted exterior cleaning specialists. Pressure washing, soft washing, roof, gutter & window cleaning across Cork city & county. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/contact/",
+  "title": "Contact Us | Free Quote | Property Cleaning Cork",
+  "title_len": 48,
+  "desc_len": 131,
+  "desc": "Get your free, no-obligation exterior cleaning quote. Call +353 87 708 1460 or send a message - we cover all of Cork city & county.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "ContactPage"
+  ]
+ },
+ {
+  "url": "/window-cleaning-cork/",
+  "title": "Window Cleaning Cork | Homes, Shops & Offices",
+  "title_len": 45,
+  "desc_len": 140,
+  "desc": "Streak-free window cleaning across Cork for homes, shopfronts & offices. Pure-water pole system reaches up to 4 storeys safely. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/exterior-cleaning-cork/",
+  "title": "House Washing Cork | Exterior House Cleaning Experts",
+  "title_len": 52,
+  "desc_len": 147,
+  "desc": "Complete exterior house cleaning in Cork: walls, render, roofs, gutters, windows & driveways. One team, one visit. 4.9\u2605 on Trustpilot. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/stone-surface-cleaning/",
+  "title": "Stone Cleaning Cork | Patio & Marble Restoration",
+  "title_len": 48,
+  "desc_len": 151,
+  "desc": "Specialist stone & marble cleaning in Cork. Natural stone patios, limestone, sandstone & granite restored without damage. Insured experts. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/soft-washing-cork/",
+  "title": "Soft Washing Cork | Safe Render & Exterior Cleaning",
+  "title_len": 51,
+  "desc_len": 152,
+  "desc": "Gentle, effective soft washing for render, K-rend, cladding & delicate surfaces across Cork. Kills algae & moss at the root. Fully insured. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/roof-cleaning-cork/",
+  "title": "Roof Cleaning Cork | Moss Removal & Roof Washing",
+  "title_len": 48,
+  "desc_len": 150,
+  "desc": "Professional roof cleaning & moss removal in Cork. Safe, non-damaging methods that protect tiles & extend roof life. Fully insured. Free, fast quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/services/",
+  "title": "Exterior Cleaning Services in Cork | Property Cleaning Cork",
+  "title_len": 59,
+  "desc_len": 148,
+  "desc": "Explore our full range of exterior cleaning services in Cork: pressure washing, soft washing, roof & gutter cleaning, windows and stone restoration.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/gutter-cleaning-cork/",
+  "title": "Gutter Cleaning Cork | Clearing, Repairs & Fascias",
+  "title_len": 50,
+  "desc_len": 147,
+  "desc": "Gutter cleaning, clearing & repairs across Cork. Protect your roof & walls from water damage. Fascia & soffit washing too. 4.9\u2605 rated. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/driveway-cleaning-cork/",
+  "title": "Driveway Cleaning Cork | Restore, Clean & Reseal",
+  "title_len": 48,
+  "desc_len": 145,
+  "desc": "Driveway cleaning & restoration in Cork for concrete, tarmac, cobblelock & gravel. Weeds, moss & stains removed, optional resealing. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-douglas/",
+  "title": "Property Cleaning Douglas | Pressure Washing & More",
+  "title_len": 51,
+  "desc_len": 152,
+  "desc": "Exterior cleaning in Douglas, Cork: pressure washing, soft washing, gutters, roofs & windows for homes from Maryborough Hill to Rochestown. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/commercial-pressure-washing/",
+  "title": "Commercial Pressure Washing Cork | Car Parks & Yards",
+  "title_len": 52,
+  "desc_len": 153,
+  "desc": "Commercial pressure washing in Cork: car parks, forecourts, loading bays & walkways. Remove oil, gum & slip hazards. Insured, RAMS provided. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/commercial-cleaning-cork/",
+  "title": "Commercial Exterior Cleaning Cork | Offices & Retail",
+  "title_len": 52,
+  "desc_len": 152,
+  "desc": "Commercial exterior cleaning across Cork. Storefronts, offices, hotels & schools kept spotless with flexible out-of-hours scheduling. Free site surveys.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-cobh/",
+  "title": "Property Cleaning Cobh | Exterior & Pressure Washing",
+  "title_len": 52,
+  "desc_len": 152,
+  "desc": "Exterior cleaning in Cobh: sea-air grime, salt & algae removed from render, roofs, gutters & driveways on the Great Island. Insured locals. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-ballincollig/",
+  "title": "Property Cleaning Ballincollig | Exterior Washing",
+  "title_len": 49,
+  "desc_len": 147,
+  "desc": "Exterior cleaning in Ballincollig: driveways, render, roofs, gutters & windows cleaned by insured local specialists. 4.9\u2605 rated. Free, fast quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/building-exterior-cleaning/",
+  "title": "Building Exterior Cleaning Cork | Facade Washing",
+  "title_len": 48,
+  "desc_len": 151,
+  "desc": "Facade & building exterior cleaning in Cork. Render, brick, cladding & signage washed safely for offices, retail & apartment blocks. Free site surveys.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-midleton/",
+  "title": "Property Cleaning Midleton | Exterior & Roof Washing",
+  "title_len": 52,
+  "desc_len": 147,
+  "desc": "Exterior cleaning in Midleton & East Cork: pressure washing, soft washing, roof moss removal & gutter clearing for homes & businesses. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-carrigaline/",
+  "title": "Property Cleaning Carrigaline | Exterior Washing",
+  "title_len": 48,
+  "desc_len": 148,
+  "desc": "Exterior cleaning in Carrigaline: driveways, render, roofs & gutters cleaned for homes from Herons Wood to Forest Hill. Insured locals. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/cork-city/",
+  "title": "Property Cleaning Cork City | Exterior Specialists",
+  "title_len": 50,
+  "desc_len": 153,
+  "desc": "Exterior property cleaning across Cork City: Douglas, Bishopstown, Blackrock, Glanmire & beyond. Pressure washing, roofs, gutters & windows. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/pressure-washing-cork/",
+  "title": "Pressure Washing Cork | Driveways, Patios & Paths",
+  "title_len": 49,
+  "desc_len": 149,
+  "desc": "Professional pressure washing across Cork city & county. Driveways, patios, paths & walls restored by insured local experts. 4.9\u2605 rated. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage/FAQPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/about-us/",
+  "title": "About Us | Property Cleaning Cork",
+  "title_len": 33,
+  "desc_len": 137,
+  "desc": "Meet Property Cleaning Cork - local, insured exterior cleaning specialists trusted by homes & businesses across Cork. 4.9\u2605 on Trustpilot.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "AboutPage"
+  ]
+ },
+ {
+  "url": "/blog/",
+  "title": "Cleaning Tips & Advice | Property Cleaning Cork Blog",
+  "title_len": 52,
+  "desc_len": 128,
+  "desc": "Expert advice on exterior cleaning, pressure washing, roof moss, gutters & stone care from Cork's property cleaning specialists.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness",
+   "WebSite",
+   "CollectionPage"
+  ]
+ },
+ {
+  "url": "/property-cleaning-kinsale/",
+  "title": "Property Cleaning Kinsale | Exterior & Pressure Washing",
+  "title_len": 55,
+  "desc_len": 144,
+  "desc": "Exterior cleaning in Kinsale: sea salt, algae & grime removed from render, roofs, gutters & driveways by insured local specialists. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-mallow/",
+  "title": "Property Cleaning Mallow | Exterior & Pressure Washing",
+  "title_len": 54,
+  "desc_len": 146,
+  "desc": "Exterior cleaning in Mallow & North Cork: pressure washing, soft washing, roof moss removal & gutter clearing for homes & businesses. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-fermoy/",
+  "title": "Property Cleaning Fermoy | Exterior & Pressure Washing",
+  "title_len": 54,
+  "desc_len": 143,
+  "desc": "Exterior cleaning in Fermoy & the Blackwater Valley: pressure washing, roof moss removal, gutter clearing & render cleaning. Free, fast quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-youghal/",
+  "title": "Property Cleaning Youghal | Exterior & Pressure Washing",
+  "title_len": 55,
+  "desc_len": 141,
+  "desc": "Exterior cleaning in Youghal: sea salt, algae & grime removed from render, roofs, gutters & driveways. Seaside home specialists. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-bandon/",
+  "title": "Property Cleaning Bandon | Exterior & Pressure Washing",
+  "title_len": 54,
+  "desc_len": 144,
+  "desc": "Exterior cleaning in Bandon & West Cork: driveways, render, roofs & gutters cleaned by insured local specialists. 4.9\u2605 rated. Free, fast quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/property-cleaning-glanmire/",
+  "title": "Property Cleaning Glanmire | Exterior & Pressure Washing",
+  "title_len": 56,
+  "desc_len": 139,
+  "desc": "Exterior cleaning in Glanmire: roof moss, blocked gutters, driveways & render cleaned for homes from Riverstown to Sallybrook. Free quotes.",
+  "schema": [
+   "Place",
+   "HomeAndConstructionBusiness/Organization",
+   "WebSite",
+   "ImageObject",
+   "WebPage",
+   "Service"
+  ]
+ },
+ {
+  "url": "/privacy-policy-2/",
+  "title": "Privacy Policy | Property Cleaning Cork",
+  "title_len": 39,
+  "desc_len": 74,
+  "desc": "How Property Cleaning Cork collects, uses and protects your personal data.",
+  "schema": []
+ },
+ {
+  "url": "/terms-and-conditions/",
+  "title": "Terms & Conditions | Property Cleaning Cork",
+  "title_len": 43,
+  "desc_len": 103,
+  "desc": "Terms and conditions for Property Cleaning Cork exterior cleaning services across Cork city and county.",
+  "schema": []
+ }
+]
