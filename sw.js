@@ -2,7 +2,7 @@
    Cache-first for static assets, network-first for pages with an
    offline fallback to the cached homepage. Admin and form endpoints
    are never intercepted. */
-const VERSION = 'villa-andie-v1';
+const VERSION = 'villa-andie-v2';
 const OFFLINE_URL = './';
 
 self.addEventListener('install', (event) => {
