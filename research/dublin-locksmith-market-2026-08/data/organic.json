@@ -1,0 +1,104 @@
+{
+  "method": "Web search index results (Irish-intent queries), August 14 2026. Google.ie SERP scraping is blocked from this network, so orderings are an approximation of Google.ie organic; Irish-relevant results only, US/other Dublins excluded.",
+  "keywords": {
+    "locksmith dublin": [
+      {"pos": 1, "domain": "dynolocks.ie", "title": "Dyno Locksmiths Dublin : 24-HR Emergency Locksmiths Dublin"}
+    ],
+    "emergency locksmith dublin / 24 hour locksmith dublin": [
+      {"pos": 1, "domain": "dynolocks.ie", "title": "Dyno Locksmiths Dublin : 24-HR Emergency Locksmiths Dublin"},
+      {"pos": 2, "domain": "24hour-locksmith.ie", "title": "24 Hour Locksmith Dublin | Emergency, Car & Residential Locksmith"},
+      {"pos": 3, "domain": "locksmiths.ie", "title": "Locksmith Dublin & All Across Ireland - 24 Hour (Free Quote)"},
+      {"pos": 4, "domain": "locksmithindublin.ie", "title": "Locksmith Dublin - Emergency Lockout Service (Get Quote)"},
+      {"pos": 5, "domain": "emergencylocksmiths247.ie", "title": "Emergency Locksmiths 24/7 - | 24/7 Service"},
+      {"pos": 6, "domain": "nokego.ie", "title": "Locksmith Dublin - Emergency Locksmith - Smart Door Locks - Nokego"},
+      {"pos": 7, "domain": "locksafe.ie", "title": "Dublin Locksmith | South Dublin Locksmith | Locksafe"},
+      {"pos": 8, "domain": "locksmiths365.ie", "title": "Locksmith Dublin - Only €90, 24 Hour Locksmiths In Dublin"}
+    ],
+    "car locksmith dublin": [
+      {"pos": 1, "domain": "thelockman.ie", "title": "Auto Locksmiths Dublin / Ireland - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 2, "domain": "autolocksmiths.ie", "title": "Auto Locksmiths"},
+      {"pos": 3, "domain": "carkeyrepair.ie", "title": "Car Key Repair & Replacement - Auto Locksmith Dublin 24/7"},
+      {"pos": 4, "domain": "24hour-locksmith.ie", "title": "24 Hour Locksmith Dublin | Emergency, Car & Residential"},
+      {"pos": 5, "domain": "dynolocks.ie", "title": "Dyno Locksmiths Dublin : 24-HR Emergency Locksmiths Dublin"},
+      {"pos": 6, "domain": "autolockandhouse.com", "title": "Autolock Locksmiths Dublin 15 - Car and House Locksmiths | PSA Registered"}
+    ],
+    "locksmith dun laoghaire": [
+      {"pos": 1, "domain": "dublinlocksmiths.ie", "title": "Locksmiths Dún Laoghaire | Dublin Locksmiths | County Dublin"},
+      {"pos": 2, "domain": "dynolocks.ie", "title": "Locksmith Dún Laoghaire - 24 Hr Dún Laoghaire Locksmiths"},
+      {"pos": 3, "domain": "locksmithsdunlaoghaire.ie", "title": "Locksmiths Dún Laoghaire | Emergency Locksmith Dún Laoghaire"},
+      {"pos": 4, "domain": "unitedlocksmiths.ie", "title": "Locksmith Dun-Laoghaire Services | Free Call-Outs | 24/7 Service"},
+      {"pos": 5, "domain": "thelockman.ie", "title": "Locksmith Dun Laoghaire - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 6, "domain": "newlock.ie", "title": "DUN LAOGHAIRE LOCKSMITH – newlock"},
+      {"pos": 7, "domain": "xllock.com", "title": "Locksmith Dun-Laoghaire – Xllock"}
+    ],
+    "locksmith tallaght": [
+      {"pos": 1, "domain": "dynolocks.ie", "title": "Locksmith Tallaght - Locksmiths Tallaght Dublin 24 Hr (Free Quote)"},
+      {"pos": 2, "domain": "goldenpages.ie", "title": "Best 15 Locksmiths in Tallaght - Golden Pages"},
+      {"pos": 3, "domain": "locksmiths365.ie", "title": "Tallaght Locksmith Services | Locksmiths 365 | Locksmiths Tallaght"},
+      {"pos": 4, "domain": "thelockman.ie", "title": "Locksmith Tallaght - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 5, "domain": "newlock.ie", "title": "TALLAGHT LOCKSMITH – newlock"},
+      {"pos": 6, "domain": "locksmiths.ie", "title": "Locksmiths Tallaght – Locksmiths.ie"},
+      {"pos": 7, "domain": "dyno-lock.ie", "title": "24 hour locksmith Tallaght - Call Now 01-8748495"},
+      {"pos": 8, "domain": "abilitylocks.com", "title": "Emergency Locksmith - www.abilitylocks.com"}
+    ],
+    "locksmith dundrum": [
+      {"pos": 1, "domain": "fogartylocksmiths.ie", "title": "Fogarty Locksmith Dublin Dundrum – Fogarty Lock & Safe Co"},
+      {"pos": 2, "domain": "aplockandsafe.ie", "title": "Locksmiths Dundrum - Call 0872506174, Dublin Locksmiths Since '77"},
+      {"pos": 3, "domain": "goldenpages.ie", "title": "Best 14 Locksmiths in Dundrum - Golden Pages"},
+      {"pos": 4, "domain": "emergencylocksmiths247.ie", "title": "Locksmith Dundrum - Emergency Locksmiths 24/7"},
+      {"pos": 5, "domain": "locksmithservice.ie", "title": "Emergency Locksmith in Dundrum, Dublin | 24/7 Locksmith Dundrum (DIALOCK)"},
+      {"pos": 6, "domain": "thelockman.ie", "title": "Locksmith Dundrum - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 7, "domain": "dynolocks.ie", "title": "Locksmith Dundrum | 24/7 Emergency & Mobile Locksmiths"},
+      {"pos": 8, "domain": "xllock.com", "title": "Locksmith Dundrum - Affordable And Professional"}
+    ],
+    "locksmith blackrock": [
+      {"pos": 1, "domain": "dublinlocksmiths.ie", "title": "Blackrock Locksmith | Dublin Locksmiths | County Dublin"},
+      {"pos": 2, "domain": "locksmiths.ie", "title": "Locksmiths Blackrock - Locksmiths.ie"},
+      {"pos": 3, "domain": "acelocksmiths.ie", "title": "Blackrock Locksmiths - 7 Days A Week. AceLocksmiths.ie"},
+      {"pos": 4, "domain": "aplockandsafe.ie", "title": "Locksmiths Blackrock - Call 0872506174, Dublin Locksmiths Since '77"},
+      {"pos": 5, "domain": "dynolocks.ie", "title": "Locksmiths Blackrock - Dyno Locks & Alarms | Locksmiths"},
+      {"pos": 6, "domain": "goldenpages.ie", "title": "Best 13 Locksmiths in Blackrock - Golden Pages"},
+      {"pos": 7, "domain": "locksmiths247.ie", "title": "Local Locksmiths Blackrock – Locksmiths247.ie"},
+      {"pos": 8, "domain": "unitedlocksmiths.ie", "title": "Locksmith Blackrock Services | Free Call-Outs | 24/7 Service"},
+      {"pos": 9, "domain": "thelockman.ie", "title": "Locksmith Blackrock - The Lockman | 24/7 Locksmith Dublin"}
+    ],
+    "locksmith south dublin": [
+      {"pos": 1, "domain": "dynolocks.ie", "title": "Locksmith South Dublin - Dyno Locks 24 Hour Locksmith Dublin"},
+      {"pos": 2, "domain": "locksafe.ie", "title": "Dublin Locksmith | South Dublin Locksmith | Locksafe"},
+      {"pos": 3, "domain": "locksmithsdublin.ie", "title": "Locksmiths Dublin | Locksmith | Auto Keys Dublin (Free Quote)"},
+      {"pos": 4, "domain": "locksmiths247.ie", "title": "Locksmiths South Dublin - 24hr Emergency - (Get a Quote)"},
+      {"pos": 5, "domain": "aplockandsafe.ie", "title": "Locksmiths Near Dublin South - Expert Dublin Locksmiths"},
+      {"pos": 6, "domain": "newlock.ie", "title": "South County Dublin Locksmith Service"}
+    ],
+    "locksmith rathfarnham": [
+      {"pos": 1, "domain": "acelocksmiths.ie", "title": "Locksmiths Rathfarnham - 7 Days a Week. Acelocksmiths.ie"},
+      {"pos": 2, "domain": "dynolocks.ie", "title": "Locksmith Rathfarnham | Emergency Locksmith Service Rathfarnham"},
+      {"pos": 3, "domain": "aplockandsafe.ie", "title": "Locksmiths Rathfarnham - Call 0872506174, Dublin Locksmiths Since '77"},
+      {"pos": 4, "domain": "locksmiths365.ie", "title": "Locksmith Rathfarnham | Home, Auto, Commercial Locksmiths"},
+      {"pos": 5, "domain": "thelockman.ie", "title": "Locksmith Rathfarnham - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 6, "domain": "unitedlocksmiths.ie", "title": "Locksmith Rathfarnham Services | Free Call-Outs | 24/7 Service"},
+      {"pos": 7, "domain": "xllock.com", "title": "Locksmith Rathfarnham - Affordable And Professional (Free Quote)"},
+      {"pos": 8, "domain": "newlock.ie", "title": "RATHFARNHAM LOCKSMITH – newlock"}
+    ],
+    "locksmith swords": [
+      {"pos": 1, "domain": "fogartylocksmiths.ie", "title": "Locksmith Dublin Swords – Fogarty Lock & Safe Co"},
+      {"pos": 2, "domain": "lockman.ie", "title": "Lockman - Locksmiths Swords | Locksmith Services in Swords County Dublin"},
+      {"pos": 3, "domain": "goldenpages.ie", "title": "Best 20 Locksmiths in Swords - Golden Pages"},
+      {"pos": 4, "domain": "locksmithservice.ie", "title": "Locksmith service in Swords, Dublin | DIALOCK LTD"},
+      {"pos": 5, "domain": "thelockboss.ie", "title": "The Locksmith Dublin Boss - Locksmith Swords"},
+      {"pos": 6, "domain": "thelockman.ie", "title": "Locksmith Swords - The Lockman | 24/7 Locksmith Dublin"},
+      {"pos": 7, "domain": "xllock.com", "title": "Locksmith Swords - Affordable And Professional (Free Quote)"}
+    ],
+    "locksmiths near me (dublin)": [
+      {"pos": 1, "domain": "locallocksmiths.ie", "title": "Local Locksmiths in Dublin Ireland - Near Me"},
+      {"pos": 2, "domain": "locksmithsdublin.ie", "title": "Locksmiths Dublin | Locksmith | Auto Keys Dublin (Free Quote)"},
+      {"pos": 3, "domain": "dynolocks.ie", "title": "Dyno Locksmiths Dublin : 24-HR Emergency Locksmiths Dublin"},
+      {"pos": 4, "domain": "dyno-lock.ie", "title": "Locksmiths Dublin | Expert Locksmith Near North & South Areas"},
+      {"pos": 5, "domain": "goldenpages.ie", "title": "20 Locksmiths in Dublin - Golden Pages"},
+      {"pos": 6, "domain": "bark.com", "title": "Find a Locksmith in Dublin - Bark.com"},
+      {"pos": 7, "domain": "thelockman.ie", "title": "The Lockman - Locksmith Services Dublin | 24/7 Locksmith Dublin"},
+      {"pos": 8, "domain": "dublinlocksmiths.ie", "title": "Dublin Locksmiths | Locksmiths | Dublin"},
+      {"pos": 9, "domain": "locksmiths247.ie", "title": "Locksmith Dublin | Local Locksmiths Dublin 24/7 (Free Quote)"}
+    ]
+  }
+}
